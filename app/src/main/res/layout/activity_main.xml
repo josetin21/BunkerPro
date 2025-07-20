@@ -28,29 +28,31 @@
         android:id="@+id/etPresent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
         android:gravity="center"
         android:hint="No of hours present"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/etTotal"
-        tools:layout_editor_absoluteY="281dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvBanner" />
 
-    <Button
-        android:id="@+id/btnCalculate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Calculate"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="169dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/btnCalculate"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/spinner"
-        app:layout_constraintTop_toBottomOf="@+id/etPresent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTotal" />
 
     <EditText
         android:id="@+id/etTotal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:hint="Total no of hours"
@@ -58,18 +60,18 @@
         app:layout_constraintEnd_toStartOf="@+id/etPresent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="282dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvBanner" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="169dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        app:layout_constraintEnd_toStartOf="@+id/btnCalculate"
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTotal" />
+        app:layout_constraintStart_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/etPresent" />
 
     <TextView
         android:id="@+id/tvresult"
