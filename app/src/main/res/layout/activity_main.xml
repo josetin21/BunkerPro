@@ -15,73 +15,74 @@
         android:gravity="center"
         android:padding="10dp"
         android:text="Bunker Pro "
-        android:textSize="30sp"
+        android:textSize="50sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.394" />
-
-    <EditText
-        android:id="@+id/etTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:hint="Total no of hours"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/etPresent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="217dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="60dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/etTotal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintVertical_bias="0.099" />
 
     <EditText
         android:id="@+id/etPresent"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
         android:gravity="center"
         android:hint="No of hours present"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etTotal"
+        tools:layout_editor_absoluteY="281dp" />
 
     <Button
         android:id="@+id/btnCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginTop="12dp"
         android:text="Calculate"
-        app:layout_constraintBottom_toTopOf="@+id/tvresult"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/etPresent" />
+
+    <EditText
+        android:id="@+id/etTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:hint="Total no of hours"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/etPresent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="282dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="169dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/btnCalculate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTotal" />
 
     <TextView
         android:id="@+id/tvresult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="124dp"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="you can bunk 12 hours"
         android:textSize="24sp"
-        android:padding="10dp"
-        android:gravity="center"
+        android:fontFamily="serif-monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
